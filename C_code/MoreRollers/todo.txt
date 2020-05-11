@@ -1,0 +1,2 @@
+- remove traces of short time stuff (and control output frequency)
+- clean up log summary, find missing 20%

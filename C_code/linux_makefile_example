@@ -1,0 +1,16 @@
+CC=gcc
+CFLAGS=-c -Wall -fopenmp
+LDFLAGS=-lgomp -lgsl -lgslcblas -fopenmp
+SOURCES=collision.c log.c neighbor.c parameters.c profiler.c random.c Roller.c stdafx.c utils.c
+OBJECTS=$(SOURCES:.c=.o)
+EXECUTABLE=rollers
+
+all: $(SOURCES) $(EXECUTABLE)
+    
+$(EXECUTABLE): $(OBJECTS) 
+	$(CC)  $(OBJECTS) $(LDFLAGS) -o $@
+
+.c.o:
+	$(CC) $(CFLAGS) $< -o $@
+
+clean: 

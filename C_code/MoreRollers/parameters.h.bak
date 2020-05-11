@@ -1,0 +1,67 @@
+#ifndef _PAR_H
+#define _PAR_H
+
+// This file declares the parameters and gives them default values.
+// These should be overwritten by the input file data.
+
+
+// constants
+#define TRUE 1
+#define FALSE 0
+#define FORMAT_CSV 0
+#define FORMAT_BIN 1
+
+
+extern double RSTAR_SQ;
+// maximum RAM to be allocated in kilobytes, also individual output file size
+#define MAX_MEMORY 50000
+
+// To be changed
+#define VECTORIAL 1
+#define ANGULAR   2
+
+extern char * formatNames[];
+
+// file names
+extern char INPUT_FILE[256];
+extern char LOG_FILE[256];
+
+// directory names
+extern char OUTPUT_DIR[256];
+
+// output format
+extern int OUTPUT_FORMAT;
+
+// physical parameters
+extern int NPART ;		// number of particles
+extern int NITER ;	// number of iterations
+
+extern double NOISE ;		// noise strength
+extern double BOX_X;		// box X length
+extern double BOX_Y;		// box Y length
+extern double V0 ;		// particle speed
+extern double originalDT  ;		// default sampling time
+extern double ALIGN;		// alignment strength
+extern double DEFLECT;		// obstacle deflection strength
+extern double RSTAR;		// interparticle interaction radius
+
+// AUTOCODE START
+extern int MAX_RUNTIME_MINUTES;
+extern double HYSTER_NOISE;
+extern int HYSTER;
+extern char INITIAL_DATA_FILE[256];
+extern double SIMTIME;
+extern double TIME_BETWEEN_SAMPLES;
+extern int NOISE_MODE;
+extern int NORMALIZE_NEIGHBORS;
+extern int PERIODIC_Y;
+extern int PERIODIC_X;
+extern double OBSTACLE_RADIUS;
+extern double OBSTACLEDEFLECTION;
+extern int OBSTACLENUM;
+extern double SOFT_WALLS_STRENGTH;
+extern int SOFT_WALLS;
+extern double RDEFLECTION;
+// AUTOCODE END
+
+#endif

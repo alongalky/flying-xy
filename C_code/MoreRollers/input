@@ -1,0 +1,31 @@
+
+// file names
+LOG_FILE    = log$.dat		// the $ will be replaced by a time slice number
+OUTPUT_DIR  = outputnoise_12.0_dens_1.0        // the directory for all the *.dat files
+
+// output format (options "csv", bin")
+OUTPUT_FORMAT = bin
+
+// physical parameters
+NPART       = 1000	// number of particles
+NITER       = 20000	    // number of iterations
+SIMTIME     = 0.0   // replaces NITER
+NOISE       = 1.0	// noise strength
+BOX_X       = 20.0	// box X length
+BOX_Y       = 20.0	// box Y length
+V0	        = 1.0	// particle speed
+DT	        = 0.05	// default time step
+ALIGN       = 1.0	// alignment strength
+DEFLECT     = 0.0	// deflection strength
+RDEFLECTION = 0.0   // deflection radius
+RSTAR       = 1.0   // interaction radius
+SOFT_WALLS = false  // soft walls on Y
+SOFT_WALLS_STRENGTH = 0.0   // strength factor for wall repulsion
+OBSTACLEDEFLECTION = 0.0   // strength of deflection from obstacles
+OBSTACLENUM = 0             // number of obstacles
+PERIODIC_X = true
+PERIODIC_Y = true
+NORMALIZE_NEIGHBORS = true
+NOISE_MODE = angular
+TIME_BETWEEN_SAMPLES = 0.05
+
